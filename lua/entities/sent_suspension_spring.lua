@@ -145,6 +145,8 @@ function mode:onThink( controller )
         return
     end
 
+    if e1:IsDormant() or e2:IsDormant() then self:setnodraw( controller, true ) return end
+
     self:setnodraw( controller, false )
     if data.helix then
         data.helix:think( e2:LocalToWorld( data.offset2 ), e1:LocalToWorld( data.offset1 ) )

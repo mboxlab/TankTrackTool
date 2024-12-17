@@ -216,6 +216,8 @@ function mode:onThink( controller )
         return
     end
 
+    if e1:IsDormant() or e2:IsDormant() then self:setnodraw( controller, true ) return end
+
     self:setnodraw( controller, false )
     data.shock:setcontrolpoints( e2:LocalToWorld( data.offset2 ), e1:LocalToWorld( data.offset1 ) )
 end
