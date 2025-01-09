@@ -872,7 +872,7 @@ do
             wheel.le_posworld, wheel.le_angworld = LocalToWorld( wheel.le_poslocal, wheel_ang_l, arm_pos_w, arm.le_angworld )
 
             -- hacky localized vector used by the track renderer written for the old system, I hate it but I'm not redoing it
-            wheel[1], _ = WorldToLocal( wheel.le_posworld, _mang, pos, ang )
+            wheel[1] = WorldToLocal( wheel.le_posworld, _mang, pos, ang )
 
             -- damper
             local damper = parts[3]--parts.damper
@@ -927,7 +927,7 @@ do
                 wheel.ri_posworld, wheel.ri_angworld = LocalToWorld( wheel.ri_poslocal, wheel_ang_l, arm_pos_w, arm.ri_angworld )
 
                 -- hacky localized vector used by the track renderer written for the old system, I hate it but I'm not redoing it
-                wheel[2], _ = WorldToLocal( wheel.ri_posworld, _mang, pos, ang )
+                wheel[2] = WorldToLocal( wheel.ri_posworld, _mang, pos, ang )
 
                 if damper then
                     damper.ri_posworld = LocalToWorld( damper.ri_poslocal, _mang, pos, ang )
