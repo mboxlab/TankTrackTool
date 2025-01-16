@@ -60,7 +60,7 @@ if CLIENT then
 
 		local limit = 3200000
 		local ents = {"sent_tanktracks_legacy", "sent_tanktracks_auto", "sent_suspension_shock", "sent_suspension_spring", "sent_point_beam"}
-		for _, key in ipairs() do
+		for _, key in ipairs(ents) do
 			local ENT = scripted_ents.GetStored(key)
 
 			if ENT then
